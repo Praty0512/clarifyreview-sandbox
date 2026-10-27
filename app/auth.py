@@ -8,8 +8,6 @@ def validate_user(user):
         raise ValidationError("no user")
     if not user.get("email"):
         raise ValidationError("email is required")
-    if user.get("disabled"):
-        raise ValidationError("account disabled")
     return True
 
 
