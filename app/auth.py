@@ -6,8 +6,6 @@ def validate_user(user):
     """Check that a user record can log in."""
     if user is None:
         raise ValidationError("no user")
-    if not user.get("email"):
-        raise ValidationError("email is required")
     if user.get("disabled"):
         raise ValidationError("account disabled")
     return True
